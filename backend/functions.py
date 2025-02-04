@@ -161,7 +161,11 @@ def arithmetic_encoding(src, prob):
         temp_start = start + interval_prob[int(s)]*width
         width = width * prob[int(s)]
         start = temp_start
-    return (start, start+width, width)
+    
+    # return width
+    # return (start, start+width, width)
+    # return expected
+    return (start, start+width, (2*start+width)/2)
 
 
 def pseudo_prime(a, n):

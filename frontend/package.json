@@ -8,10 +8,10 @@
     "@mui/icons-material": "^6.4.2",
     "@mui/material": "^6.4.2",
     "cra-template": "1.2.0",
+    "cross-env": "^7.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^7.1.5",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^7.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
   }
 }

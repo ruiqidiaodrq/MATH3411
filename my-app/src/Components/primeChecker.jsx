@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import { 
     Container, Card, CardContent, Typography, TextField, Button, Box 
 } from '@mui/material';
@@ -79,5 +80,10 @@ class PrimeChecker extends Component {
     }
 
 }
+
+PrimeChecker.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+};
 
 export default PrimeChecker;

@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import { 
     Container, Card, CardContent, Typography, TextField, Button, Box 
 } from '@mui/material';
@@ -61,7 +62,7 @@ class ArithmeticEncoding extends Component {
                         </Typography>
                         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                             For example, for a code system a, b, c, d, e with and corresponding code probability 0.1, 0.2, 0.3, 0.2, 0.2 and position 1, 2, 3, 4, 5.
-                            If we want to encode the word 'bad', Enter 2,1,4 in source position and 0.1, 0.2, 0.3, 0.2, 0.2 in code probability.
+                            If we want to encode the word &apos;bad&apos;, Enter 2,1,4 in source position and 0.1, 0.2, 0.3, 0.2, 0.2 in code probability.
                             The encoded interval is (0.112, 0.116) with a width 0.004.
                         </Typography>
                         
@@ -96,7 +97,8 @@ class ArithmeticEncoding extends Component {
 
                         {this.state.start !== '' && (
                             <Typography variant="body1" sx={{ mt: 2, fontWeight: 'bold' }}>
-                                The encoded interval is ({this.state.start}, {this.state.end}) with a width {this.state.width}.
+                                {/* The encoded interval is ({this.state.start}, {this.state.end}) with a width {this.state.width}. */}
+                                The encoded interval is ({this.state.start}, {this.state.end}) and suggested encoded message is {this.state.width}.
                             </Typography>
                         )}
 
@@ -107,5 +109,10 @@ class ArithmeticEncoding extends Component {
     }
 
 }
+
+ArithmeticEncoding.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+};
 
 export default ArithmeticEncoding;

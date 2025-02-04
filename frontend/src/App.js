@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import GeneralPage from './Components/generalPage';
-import MainMenu from './Components/mainMenu';
-import LZ78Encoding from './Components/LZ78Encoding';
-import ISBNChecker from './Components/ISBNChecker';
-import ShannonEntropy from './Components/shannonEntropy';
-import ShannonAverage from './Components/shannonAverage';
-import KraftMcMillan from './Components/KraftMcMillan';
-import PrimeChecker from './Components/primeChecker';
-import EulerTotient from './Components/EulerTotient';
-import ArithmeticEncoding from './Components/arithmeticEncoding';
-import Pseudoprime from './Components/pseudoprime';
+import MainMenu from '../../my-app/Components/mainMenu';
+import LZ78Encoding from '../../my-app/Components/LZ78Encoding';
+import ISBNChecker from '../../my-app/Components/ISBNChecker';
+import ShannonEntropy from '../../my-app/Components/shannonEntropy';
+import ShannonAverage from '../../my-app/Components/shannonAverage';
+import KraftMcMillan from '../../my-app/Components/KraftMcMillan';
+import PrimeChecker from '../../my-app/Components/primeChecker';
+import EulerTotient from '../../my-app/Components/EulerTotient';
+import ArithmeticEncoding from '../../my-app/Components/arithmeticEncoding';
+import Pseudoprime from '../../my-app/Components/pseudoprime';
 // import ArithmeticDecoding from './Components/arithmeticDecoding';
 
 const NotFound = () => (
