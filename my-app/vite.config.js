@@ -10,6 +10,12 @@ const __dirname = path.dirname(__filename)
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'index.html',
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
