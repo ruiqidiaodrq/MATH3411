@@ -20,8 +20,8 @@ class ISBNChecker extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
-            const response = await axios.post(`${apiUrl}/isbn_checker/`, {
+            // const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/isbn_checker/`, {
                 isbn: this.state.input
             });
 

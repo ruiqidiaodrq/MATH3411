@@ -18,7 +18,7 @@ class EulerTotient extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/euler_totient/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/euler_totient/`, {
                 number: this.state.input
             });
 
