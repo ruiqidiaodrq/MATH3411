@@ -38,5 +38,5 @@ EXPOSE 3000
 # Run Vite in preview mode (for production-like behavior)
 # CMD ["npm", "run", "preview"]
 # CMD ["npm", "start"]
-CMD ["sh", "-c", "npm start -- --port $PORT"]
+CMD ["sh", "-c", "npm run preview -- --port $PORT"]
 

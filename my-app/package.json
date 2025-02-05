@@ -10,7 +10,7 @@
     "test": "vite test",
     "eject": "vite eject",
     "preview": "vite preview",
-    "start": "npx vite preview --host 0.0.0.0"
+    "start": "npm run preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
