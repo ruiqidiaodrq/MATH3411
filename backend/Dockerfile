@@ -1,4 +1,3 @@
-# use Python 3.9
 FROM python:3.11-slim
 
 # setting working directory
