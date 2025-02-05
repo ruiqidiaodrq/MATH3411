@@ -32,10 +32,11 @@ RUN npm run build
 
 # Expose port 5173 (default Vite port)
 # EXPOSE 5173
-EXPOSE 4173
+# EXPOSE 4173
+EXPOSE 3000
 
 # Run Vite in preview mode (for production-like behavior)
 # CMD ["npm", "run", "preview"]
-CMD ["npm", "start"]
-
+# CMD ["npm", "start"]
+CMD ["sh", "-c", "npm start -- --port $PORT"]
 
