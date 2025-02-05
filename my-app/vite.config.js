@@ -9,9 +9,11 @@ const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig({
+  root: '.',
   plugins: [react()],
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
