@@ -19,7 +19,7 @@ class PrimeChecker extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/prime_checker/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/prime_checker/`, {
                 number: this.state.input
             });
 

@@ -22,7 +22,7 @@ class Pseudoprime extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/pseudoprime/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/pseudoprime/`, {
                 a: this.state.a, 
                 n: this.state.n,
             });

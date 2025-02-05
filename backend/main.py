@@ -83,10 +83,10 @@ async def arithmetic_encoding_calculate(request: Request):
             "end": result[1],
             "width": result[2]}
     
-    pseudo_prime(a, n)
+
 # Pseudo-prime
 @app.post("/pseudoprime/")
-async def arithmetic_encoding_calculate(request: Request):
+async def pseudoprime(request: Request):
     data = await request.json()
     a = data.get("a", "")
     n = data.get("n", "")

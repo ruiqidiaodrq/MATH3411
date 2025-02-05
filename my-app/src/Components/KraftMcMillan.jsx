@@ -20,7 +20,7 @@ class KraftMcMillan extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/Kraft_McMillan/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/Kraft_McMillan/`, {
                 radix: this.state.radix,
                 length: this.state.length
             });

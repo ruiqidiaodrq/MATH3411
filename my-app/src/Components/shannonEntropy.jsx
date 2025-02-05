@@ -22,7 +22,7 @@ class ShannonEntropy extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/shannon_entropy/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/shannon_entropy/`, {
                 prob: this.state.prob,
                 radix: this.state.radix
             });

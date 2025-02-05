@@ -18,7 +18,7 @@ class GeneralPage extends Component {
     // Handle form submission
     handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:8000/lz78_encoding/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/lz78_encoding/`, {
                 message: this.state.input
             });
 
