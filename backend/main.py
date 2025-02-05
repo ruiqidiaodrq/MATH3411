@@ -11,8 +11,8 @@ app.add_middleware(
         "http://localhost:3000", 
         "http://localhost:5173",
         "https://math-3411-git-main-ruiqidiaodrqs-projects.vercel.app",
-        "math-3411.vercel.app",
-        "math-3411-ruiqidiaodrqs-projects.vercel.app",
+        "https://math-3411.vercel.app",
+        "https://math-3411-ruiqidiaodrqs-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
