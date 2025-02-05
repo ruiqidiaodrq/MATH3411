@@ -23,7 +23,7 @@ class ArithmeticEncoding extends Component {
     handleSubmit = async () => {
         try {
             // Send the input to FastAPI backend
-            const response = await axios.post('http://localhost:8000/arithmetic_encoding/', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/arithmetic_encoding/`, {
                 src: this.state.src, 
                 prob: this.state.prob,
             });
