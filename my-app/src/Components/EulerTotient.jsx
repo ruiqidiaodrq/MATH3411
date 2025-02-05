@@ -15,19 +15,42 @@ class EulerTotient extends Component {
         };
     }
 
+    // handleSubmit = async () => {
+    //     console.log("API URL:", import.meta.env.VITE_API_URL);
+    //     try {
+    //         // Send the input to FastAPI backend
+    //         const response = await axios.post(`${import.meta.env.VITE_API_URL}/euler_totient/`, {
+    //             number: this.state.input
+    //         });
+
+    //         // Set the result in the state after the calculation
+    //         this.setState({ result: response.data.result });
+        
+    //     } catch (error) {
+    //         console.error('Error encoding message:', error);
+    //         console.error('Error details:', {
+    //             message: error.message,
+    //             response: error.response?.data,
+    //             status: error.response?.status
+    //         });
+    //     }
+    // }
+
     handleSubmit = async () => {
-        console.log("API URL:", import.meta.env.VITE_API_URL);
+        const apiUrl = import.meta.env.VITE_API_URL;
+        console.log("API URL:", apiUrl); // Debug log
+        
+        if (!apiUrl) {
+            console.error("API URL is not defined!");
+            return;
+        }
+    
         try {
-            // Send the input to FastAPI backend
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/euler_totient/`, {
+            const response = await axios.post(`${apiUrl}/euler_totient/`, {
                 number: this.state.input
             });
-
-            // Set the result in the state after the calculation
             this.setState({ result: response.data.result });
-        
         } catch (error) {
-            console.error('Error encoding message:', error);
             console.error('Error details:', {
                 message: error.message,
                 response: error.response?.data,
