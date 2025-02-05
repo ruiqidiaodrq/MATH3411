@@ -1,5 +1,5 @@
 # use node.js
-FROM node:18-alpine AS build
+FROM node:20-alpine AS build
 
 # setting working directory
 WORKDIR /app
