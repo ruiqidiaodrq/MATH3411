@@ -16,6 +16,7 @@ class EulerTotient extends Component {
     }
 
     handleSubmit = async () => {
+        console.log("API URL:", import.meta.env.VITE_API_URL);
         try {
             // Send the input to FastAPI backend
             const response = await axios.post(`${import.meta.env.VITE_API_URL}/euler_totient/`, {
@@ -27,6 +28,11 @@ class EulerTotient extends Component {
         
         } catch (error) {
             console.error('Error encoding message:', error);
+            console.error('Error details:', {
+                message: error.message,
+                response: error.response?.data,
+                status: error.response?.status
+            });
         }
     }
 
