@@ -20,6 +20,11 @@ app.add_middleware(
     expose_headers=["*"]
 )
 
+# Default route
+@app.get("/")
+async def root():
+    return {"message": "Welcome to MATH3411!"}
+
 # LZ78 Encoding
 @app.post("/lz78_encoding/")
 async def lz78_encoding(request: Request):

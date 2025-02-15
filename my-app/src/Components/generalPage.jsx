@@ -12,7 +12,6 @@ class GeneralPage extends Component {
             description: this.props.description,
             input: '',
             result: '',
-            
         };
     }
 
